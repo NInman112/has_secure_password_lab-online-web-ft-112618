@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
+    binding.pry
   end
 
   private
