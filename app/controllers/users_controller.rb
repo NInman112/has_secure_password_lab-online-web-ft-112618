@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
   def create
-    User.create(user_params)
+    user = User.new(user_params)
+
     binding.pry
   end
 
