@@ -4,7 +4,9 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.name.nil? | user.name == ''
       redirect_to users_new_path
-    binding.pry
+    else
+      user.save
+    end 
   end
 
   private
