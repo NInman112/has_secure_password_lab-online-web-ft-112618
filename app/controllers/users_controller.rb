@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
   def create
-    user = User.new(user_params)
     binding.pry
+    user = User.new(user_params)
     if user.name.nil? | user.name == ''
 
       redirect_to sessions_new_path
