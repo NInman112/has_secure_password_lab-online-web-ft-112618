@@ -6,6 +6,7 @@ class UsersController < ApplicationController
       redirect_to sessions_new_path
     else
       user.save
+      binding.pry
       session[:user_id] = user.id
     end
   end
