@@ -2,8 +2,9 @@ class UsersController < ApplicationController
 
   def create
     user = User.new(user_params)
+    binding.pry
     if user.name.nil? | user.name == ''
-      binding.pry
+
       redirect_to sessions_new_path
     else
       user.save
