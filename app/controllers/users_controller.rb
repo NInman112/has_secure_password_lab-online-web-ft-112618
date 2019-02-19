@@ -4,10 +4,10 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     binding.pry
     if user.valid?
-      redirect_to sessions_new_path
-    else
       user.save
       session[:user_id] = user.id
+    else
+      redirect_to sessions_new_path
     end
   end
 
