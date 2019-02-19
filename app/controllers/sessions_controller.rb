@@ -4,5 +4,6 @@ class SessionsController < ApplicationController
     @user = User.find_by(name: params[:user][:name])
     return head(:forbidden) unless @user.authenticate(params[:password])
     session[:user_id] = @user.id
+    binding.pry
   end
 end
