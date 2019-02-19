@@ -3,10 +3,11 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.name.nil? | user.name == ''
+      binding.pry
       redirect_to sessions_new_path
     else
       user.save
-      binding.pry
+      
       session[:user_id] = user.id
     end
   end
