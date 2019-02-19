@@ -7,7 +7,7 @@ class UsersController < ApplicationController
       redirect_to sessions_new_path
     else
       user.save
-      
+
       session[:user_id] = user.id
     end
   end
